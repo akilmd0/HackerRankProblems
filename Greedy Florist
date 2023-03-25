@@ -1,0 +1,8 @@
+from itertools import cycle
+def getMinimumCost(k, c):
+    c.sort(reverse=True)
+    s=0
+    for j in range(len(c)):
+        p=j//k
+        s+=(p+1)*c[j]
+    return s
